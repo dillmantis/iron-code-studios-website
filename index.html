@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iron Code Studios - A premier software NGO developing innovative solutions for social impact">
+    <meta name="keywords" content="software, NGO, technology, social impact, open source">
+    <title>Iron Code Studios - Forging Code for Social Impact</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.svg" alt="Iron Code Studios" class="logo-img">
+                <span class="logo-text">Iron Code Studios</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#software" class="nav-link">Software</a>
+                <a href="#updates" class="nav-link">Updates</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#donate" class="nav-link btn-primary">Donate</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Forging Code</span><br>
+                    for Social Impact
+                </h1>
+                <p class="hero-subtitle">
+                    Iron Code Studios develops cutting-edge software solutions that drive positive change in communities worldwide. We believe technology should serve humanity.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#software" class="btn btn-primary">Explore Our Software</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Lives Impacted</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Countries Reached</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Iron Code Studios</h2>
+                <p class="section-subtitle">Empowering communities through innovative technology solutions</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Our Mission</h3>
+                    <p>At Iron Code Studios, we harness the power of technology to address pressing social challenges. As a non-profit organization, we develop robust, scalable software solutions that empower communities, enhance education, improve healthcare access, and promote sustainable development.</p>
+                    
+                    <h3>What Sets Us Apart</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Enterprise-grade solutions with social impact focus</li>
+                        <li><i class="fas fa-check"></i> Open-source commitment for transparency and collaboration</li>
+                        <li><i class="fas fa-check"></i> Global team of passionate developers and designers</li>
+                        <li><i class="fas fa-check"></i> Sustainable technology practices</li>
+                    </ul>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-code"></i>
+                        <span>Our Development Process</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Impact First</h4>
+                    <p>Every line of code we write is designed to create meaningful social impact</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Community Driven</h4>
+                    <p>We work closely with communities to understand their needs and challenges</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Security & Privacy</h4>
+                    <p>Enterprise-level security standards protect user data and ensure privacy</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>Cutting-edge technology solutions that push the boundaries of what's possible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Portfolio Section -->
+    <section id="software" class="software">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Software Solutions</h2>
+                <p class="section-subtitle">Enterprise-grade applications making a difference worldwide</p>
+            </div>
+            
+            <div class="software-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="environment">Environment</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+            </div>
+            
+            <div class="software-grid" id="software-grid">
+                <div class="software-card" data-category="education">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h4>EduConnect Platform</h4>
+                        <p>Comprehensive learning management system connecting students and educators globally</p>
+                        <div class="card-meta">
+                            <span class="category">Education</span>
+                            <span class="status">Active</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="software-card" data-category="healthcare">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h4>MedAccess Portal</h4>
+                        <p>Telemedicine platform providing healthcare access to underserved communities</p>
+                        <div class="card-meta">
+                            <span class="category">Healthcare</span>
+                            <span class="status">Beta</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="software-card" data-category="environment">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h4>EcoTracker System</h4>
+                        <p>Environmental monitoring and sustainability tracking for organizations</p>
+                        <div class="card-meta">
+                            <span class="category">Environment</span>
+                            <span class="status">Active</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="software-card" data-category="community">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="card-overlay">
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h4>CommunityHub</h4>
+                        <p>Digital platform for community organizing and resource sharing</p>
+                        <div class="card-meta">
+                            <span class="category">Community</span>
+                            <span class="status">Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Section -->
+    <section id="updates" class="updates">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Updates</h2>
+                <p class="section-subtitle">Stay informed about our latest releases and announcements</p>
+            </div>
+            
+            <div class="updates-grid">
+                <article class="update-card featured">
+                    <div class="update-meta">
+                        <span class="update-date">December 15, 2024</span>
+                        <span class="update-category">Major Release</span>
+                    </div>
+                    <h3>EduConnect 3.0 Launch</h3>
+                    <p>Our flagship education platform receives a major upgrade with AI-powered personalized learning paths, enhanced accessibility features, and improved performance.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </article>
+                
+                <article class="update-card">
+                    <div class="update-meta">
+                        <span class="update-date">December 10, 2024</span>
+                        <span class="update-category">News</span>
+                    </div>
+                    <h3>Partnership with Global Education Initiative</h3>
+                    <p>Iron Code Studios partners with GEI to bring technology education to 50,000 students across Africa.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </article>
+                
+                <article class="update-card">
+                    <div class="update-meta">
+                        <span class="update-date">December 5, 2024</span>
+                        <span class="update-category">Update</span>
+                    </div>
+                    <h3>MedAccess Security Enhancement</h3>
+                    <p>Latest security patch improves data encryption and implements advanced threat detection.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+            
+            <div class="updates-cta">
+                <a href="updates.html" class="btn btn-primary">View All Updates</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Team</h2>
+                <p class="section-subtitle">Passionate professionals dedicated to making a difference</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h4>Sarah Chen</h4>
+                    <p class="member-role">Founder & CEO</p>
+                    <p class="member-bio">15+ years in enterprise software development with a passion for social impact</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h4>Marcus Rodriguez</h4>
+                    <p class="member-role">CTO</p>
+                    <p class="member-bio">Full-stack architect specializing in scalable, secure systems</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h4>Aisha Patel</h4>
+                    <p class="member-role">Lead Designer</p>
+                    <p class="member-bio">UX/UI expert focused on inclusive and accessible design</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h4>David Kim</h4>
+                    <p class="member-role">DevOps Engineer</p>
+                    <p class="member-bio">Infrastructure specialist ensuring 99.9% uptime and security</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-docker"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Partners Say</h2>
+                <p class="section-subtitle">Trusted by organizations worldwide</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "Iron Code Studios transformed our education delivery system. Their EduConnect platform has helped us reach over 10,000 students in remote areas."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <div class="avatar-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="author-info">
+                                <h5>Dr. Elena Vasquez</h5>
+                                <p>Director, Global Education Alliance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <blockquote>
+                            "The MedAccess platform has revolutionized healthcare delivery in our region. Professional, reliable, and truly life-changing."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <div class="avatar-placeholder">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="author-info">
+                                <h5>Dr. James Okonkwo</h5>
+                                <p>Medical Director, Health for All Initiative</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-controls">
+                <button class="testimonial-btn active" data-slide="0"></button>
+                <button class="testimonial-btn" data-slide="1"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Make an Impact?</h2>
+                <p>Join us in building technology solutions that matter. Whether you're looking to partner, contribute, or learn more about our work.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="#donate" class="btn btn-secondary">Support Our Mission</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Let's discuss how we can work together</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>hello@ironcodestudios.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>123 Innovation Drive<br>Tech District, CA 94105</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading">
+                                <i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Iron Code Studios">
+                        <span>Iron Code Studios</span>
+                    </div>
+                    <p>Forging code for social impact. Building tomorrow's solutions today.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press Kit</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="#software">Software</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#updates">Updates</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h5>Stay Updated</h5>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 Iron Code Studios. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

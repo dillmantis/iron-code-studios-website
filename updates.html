@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stay updated with Iron Code Studios' latest news, releases, and announcements">
+    <title>Updates & News | Iron Code Studios</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.svg" alt="Iron Code Studios" class="logo-img">
+                <span class="logo-text">Iron Code Studios</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="software.html" class="nav-link">Software</a>
+                <a href="updates.html" class="nav-link active">Updates</a>
+                <a href="index.html#team" class="nav-link">Team</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+                <a href="#donate" class="nav-link btn-primary">Donate</a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Updates & News</h1>
+                <p>Stay informed about our latest releases, partnerships, and impact stories</p>
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Updates</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Update -->
+    <section class="featured-update">
+        <div class="container">
+            <article class="featured-article">
+                <div class="article-meta">
+                    <span class="article-category featured">Major Release</span>
+                    <span class="article-date">December 15, 2024</span>
+                    <span class="article-author">By Sarah Chen</span>
+                </div>
+                
+                <h2>EduConnect 3.0: Revolutionizing Digital Education</h2>
+                
+                <div class="article-excerpt">
+                    <p>Our flagship education platform receives its most significant update yet, featuring AI-powered personalized learning paths, enhanced accessibility, and improved performance that's already impacting 50,000+ students worldwide.</p>
+                </div>
+                
+                <div class="article-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduConnect 3.0 Dashboard</span>
+                    </div>
+                </div>
+                
+                <div class="article-actions">
+                    <a href="#" class="btn btn-primary">Read Full Article</a>
+                    <div class="article-share">
+                        <span>Share:</span>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Updates Filters -->
+    <section class="updates-filters">
+        <div class="container">
+            <div class="filter-header">
+                <h3>Browse All Updates</h3>
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="updates-search" placeholder="Search updates...">
+                    </div>
+                    
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="release">Releases</option>
+                        <option value="partnership">Partnerships</option>
+                        <option value="update">Updates</option>
+                        <option value="news">News</option>
+                        <option value="event">Events</option>
+                    </select>
+                    
+                    <select id="date-filter">
+                        <option value="all">All Time</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="quarter">This Quarter</option>
+                        <option value="year">This Year</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Grid -->
+    <section class="updates-grid-section">
+        <div class="container">
+            <div class="updates-masonry" id="updates-masonry">
+                <article class="update-article">
+                    <div class="article-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category partnership">Partnership</span>
+                            <span class="article-date">December 10, 2024</span>
+                        </div>
+                        <h3>Global Education Initiative Partnership</h3>
+                        <p>Expanding our reach to 50,000 students across Africa through strategic partnership with GEI...</p>
+                        <div class="article-footer">
+                            <span class="read-time">3 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="update-article">
+                    <div class="article-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category update">Security Update</span>
+                            <span class="article-date">December 5, 2024</span>
+                        </div>
+                        <h3>MedAccess Security Enhancement</h3>
+                        <p>Latest security patch implements advanced threat detection and improves data encryption...</p>
+                        <div class="article-footer">
+                            <span class="read-time">2 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="update-article">
+                    <div class="article-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category news">Awards</span>
+                            <span class="article-date">November 28, 2024</span>
+                        </div>
+                        <h3>TechForGood Innovation Award</h3>
+                        <p>Iron Code Studios receives recognition for outstanding contribution to technology for social good...</p>
+                        <div class="article-footer">
+                            <span class="read-time">4 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="update-article">
+                    <div class="article-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category release">Release</span>
+                            <span class="article-date">November 20, 2024</span>
+                        </div>
+                        <h3>EcoTracker 2.0 Beta Launch</h3>
+                        <p>Enhanced environmental monitoring with real-time analytics and AI-powered insights...</p>
+                        <div class="article-footer">
+                            <span class="read-time">5 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="update-article">
+                    <div class="article-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category event">Event</span>
+                            <span class="article-date">November 15, 2024</span>
+                        </div>
+                        <h3>Developer Conference 2024</h3>
+                        <p>Join us for our annual developer conference featuring workshops, talks, and networking...</p>
+                        <div class="article-footer">
+                            <span class="read-time">2 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="update-article">
+                    <div class="article-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category update">Platform Update</span>
+                            <span class="article-date">November 8, 2024</span>
+                        </div>
+                        <h3>CommunityHub Alpha Release</h3>
+                        <p>First public alpha of our community organizing platform now available for testing...</p>
+                        <div class="article-footer">
+                            <span class="read-time">3 min read</span>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn" id="prev-page" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                    Previous
+                </button>
+                
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
+                    <span class="pagination-dots">...</span>
+                    <button class="pagination-number">10</button>
+                </div>
+                
+                <button class="pagination-btn" id="next-page">
+                    Next
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter-signup">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Never Miss an Update</h2>
+                    <p>Subscribe to our newsletter and be the first to know about new releases, partnerships, and impact stories.</p>
+                </div>
+                <form class="newsletter-form-large">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">
+                            Subscribe
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <p class="form-disclaimer">
+                        By subscribing, you agree to our <a href="#privacy">Privacy Policy</a>. 
+                        You can unsubscribe at any time.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Modal -->
+    <div id="article-modal" class="modal">
+        <div class="modal-overlay" onclick="closeModal('article-modal')"></div>
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <div class="modal-meta">
+                    <span class="modal-category" id="modal-category"></span>
+                    <span class="modal-date" id="modal-date"></span>
+                </div>
+                <button class="modal-close" onclick="closeModal('article-modal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modal-article-title"></h2>
+                <div class="modal-article-image">
+                    <div class="image-placeholder" id="modal-article-image">
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="modal-article-content" id="modal-article-content">
+                    <!-- Article content loaded dynamically -->
+                </div>
+                <div class="modal-article-footer">
+                    <div class="article-tags" id="modal-article-tags">
+                        <!-- Tags loaded dynamically -->
+                    </div>
+                    <div class="article-share">
+                        <span>Share this article:</span>
+                        <a href="#" class="share-btn" id="share-twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="share-btn" id="share-linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="share-btn" id="share-facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="share-btn" id="share-copy"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo.svg" alt="Iron Code Studios">
+                        <span>Iron Code Studios</span>
+                    </div>
+                    <p>Forging code for social impact. Building tomorrow's solutions today.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#team">Our Team</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press Kit</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Solutions</h5>
+                    <ul>
+                        <li><a href="software.html">Software</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h5>Stay Updated</h5>
+                    <p>Subscribe to our newsletter for the latest updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2024 Iron Code Studios. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/updates.js"></script>
+</body>
+</html>
