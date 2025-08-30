@@ -1,0 +1,47 @@
+# Global owners - Iron Code Studios Leadership Team
+* @dillmantis
+
+# Frontend code ownership
+*.html @dillmantis
+*.css @dillmantis  
+css/ @dillmantis
+js/ @dillmantis
+images/ @dillmantis
+assets/ @dillmantis
+
+# Backend code ownership
+backend/ @dillmantis
+backend/server.js @dillmantis
+backend/package.json @dillmantis
+
+# Configuration and Infrastructure
+.github/ @dillmantis
+.github/workflows/ @dillmantis
+.eslintrc.json @dillmantis
+.prettierrc @dillmantis
+.gitignore @dillmantis
+docker* @dillmantis
+*.yml @dillmantis
+*.yaml @dillmantis
+
+# Documentation
+*.md @dillmantis
+docs/ @dillmantis
+README.md @dillmantis
+CONTRIBUTING.md @dillmantis
+SECURITY.md @dillmantis
+
+# Security-sensitive files require security team review
+SECURITY.md @dillmantis
+.env.example @dillmantis
+backend/middleware/ @dillmantis
+
+# Dependencies require careful review
+package.json @dillmantis
+package-lock.json @dillmantis
+backend/package.json @dillmantis
+backend/package-lock.json @dillmantis
+
+# Release and deployment files
+.github/workflows/ci-cd.yml @dillmantis
+.github/workflows/release.yml @dillmantis

@@ -489,7 +489,7 @@
                 </div>
                 
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contact-form">
+                    <form class="contact-form" id="contact-form" name="contact" method="POST" netlify>
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -531,6 +531,29 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- WYSIWYG Test Section - You can edit this in VS Code and see live changes! -->
+    <section class="wysiwyg-test" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px 0; text-align: center; color: white;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); animation: pulse 2s infinite;">🚀 LIVE WYSIWYG EDITING WORKS! 🚀</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">Edit this section in VS Code and watch the magic happen in real-time!</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                    <h4 style="margin-bottom: 1rem;">🎨 Live Preview</h4>
+                    <p style="font-size: 0.9rem;">Changes appear instantly as you type</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                    <h4 style="margin-bottom: 1rem;">⚡ Auto-complete</h4>
+                    <p style="font-size: 0.9rem;">Smart suggestions for HTML & CSS</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                    <h4 style="margin-bottom: 1rem;">🔧 Auto-format</h4>
+                    <p style="font-size: 0.9rem;">Code formats automatically on save</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; font-style: italic; opacity: 0.8;">Try changing the colors, text, or styles above and see the live preview update!</p>
         </div>
     </section>
 
@@ -585,8 +608,8 @@
                 <div class="footer-newsletter">
                     <h5>Stay Updated</h5>
                     <p>Subscribe to our newsletter for the latest updates</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
+                    <form class="newsletter-form" name="newsletter" method="POST" netlify>
+                        <input type="email" name="email" placeholder="Enter your email" required>
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>

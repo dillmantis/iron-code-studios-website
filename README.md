@@ -1,6 +1,6 @@
-# Iron Code Studios Website
+# Iron Code Studios - Static Website
 
-A comprehensive, enterprise-grade website for Iron Code Studios - a software NGO focused on creating technology solutions for social impact.
+A comprehensive, enterprise-grade static website for Iron Code Studios - a software NGO focused on creating technology solutions for social impact. This site has been converted from a Node.js/Express application to work as a pure static site while maintaining all functionality.
 
 ## 🌟 Features
 
@@ -10,13 +10,7 @@ A comprehensive, enterprise-grade website for Iron Code Studios - a software NGO
 - **Advanced Animations**: CSS and JavaScript animations for enhanced user experience
 - **Accessibility**: WCAG 2.1 AA compliant with screen reader support
 - **Performance Optimized**: Fast loading times with optimized assets and lazy loading
-
-### Backend
-- **Email Integration**: Automated email sending for contact forms and newsletters
-- **Rate Limiting**: Protection against spam and abuse
-- **Security Features**: Helmet.js security headers, input validation, and sanitization
-- **API Endpoints**: RESTful API for software data, updates, and team information
-- **Environment Configuration**: Flexible configuration for different deployment environments
+- **Static Site**: No server required - works with any static hosting provider
 
 ### Sections & Pages
 - **Homepage**: Hero section, about, software showcase, updates, team, testimonials
@@ -28,69 +22,105 @@ A comprehensive, enterprise-grade website for Iron Code Studios - a software NGO
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Node.js (v16.0.0 or higher)
-- npm (v8.0.0 or higher)
-- A Gmail account or SMTP server for email functionality
+### Simple File Serving
+Open `index.html` directly in your browser, or use any static file server:
 
-### Installation
+```bash
+# Python 3
+python -m http.server 8000
 
-1. **Clone the repository** (if using version control):
-   ```bash
-   git clone https://github.com/ironcodestudios/website.git
-   cd iron-code-studios
-   ```
+# Python 2
+python -m SimpleHTTPServer 8000
 
-2. **Install backend dependencies**:
-   ```bash
-   cd backend
-   npm install
-   ```
+# Node.js (if available)
+npx serve .
 
-3. **Configure environment variables**:
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Edit the `.env` file with your configuration:
-   ```env
-   # Email Configuration (Required for contact form)
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASS=your-app-password
-   ADMIN_EMAIL=admin@ironcodestudios.org
-   
-   # Server Configuration
-   PORT=3000
-   NODE_ENV=development
-   FRONTEND_URL=http://localhost:3000
-   ```
-
-4. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser** and navigate to `http://localhost:3000`
-
-## 📧 Email Configuration
-
-### Gmail Setup (Recommended)
-1. Enable 2-factor authentication on your Gmail account
-2. Generate an App Password:
-   - Go to Google Account settings
-   - Security → 2-Step Verification → App passwords
-   - Select "Mail" and generate a password
-3. Use your Gmail address as `EMAIL_USER` and the app password as `EMAIL_PASS`
-
-### Alternative SMTP Setup
-If you prefer to use a different email service, uncomment and configure the SMTP settings in the `.env` file:
-
-```env
-SMTP_HOST=smtp.yourdomain.com
-SMTP_PORT=587
-SMTP_USER=noreply@yourdomain.com
-SMTP_PASS=your-smtp-password
+# PHP
+php -S localhost:8000
 ```
+
+Then visit `http://localhost:8000`
+
+### Live Server (VS Code)
+If using VS Code, install the "Live Server" extension and right-click on `index.html` → "Open with Live Server"
+
+## 📧 Contact Form Handling
+
+The contact forms currently use `mailto:` links which open the user's email client. For better user experience, consider these alternatives:
+
+### Option 1: Formspree (Recommended)
+[Formspree](https://formspree.io/) is a popular form handling service:
+
+1. Sign up at https://formspree.io/
+2. Create a new form and get your endpoint URL
+3. Update the form handler in `js/main.js`:
+
+```javascript
+// Replace the mailto functionality with:
+const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+        organization: data.organization
+    })
+});
+```
+
+### Option 2: Netlify Forms
+If hosting on Netlify, you can use their built-in form handling:
+
+1. Add `netlify` attribute to your HTML forms:
+```html
+<form id="contact-form" netlify>
+```
+
+2. Update the JavaScript to submit normally (remove preventDefault() in some cases)
+
+### Option 3: EmailJS
+[EmailJS](https://www.emailjs.com/) sends emails directly from JavaScript:
+
+1. Sign up at https://www.emailjs.com/
+2. Create email service and template
+3. Include EmailJS SDK:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+```
+
+4. Update the form handler:
+
+```javascript
+emailjs.send('your_service_id', 'your_template_id', {
+    name: data.name,
+    email: data.email,
+    message: data.message
+});
+```
+
+### Option 4: Custom Serverless Function
+Deploy a simple serverless function using:
+- Vercel Functions
+- Netlify Functions  
+- AWS Lambda
+- Cloudflare Workers
+
+## 📊 Static Data
+
+The site now uses static data instead of API endpoints:
+- Software projects are defined in `js/software.js`
+- News updates are defined in `js/updates.js`
+- Team information and other dynamic content is embedded in the JavaScript
+
+To update content:
+1. Edit the respective JavaScript files
+2. Modify the data arrays/objects
+3. Refresh the page to see changes
 
 ## 🏗️ Project Structure
 
@@ -107,10 +137,6 @@ iron-code-studios/
 │   ├── animations.js     # Animation scripts
 │   ├── software.js       # Software page scripts
 │   └── updates.js        # Updates page scripts
-├── backend/
-│   ├── server.js         # Express server
-│   ├── package.json      # Dependencies
-│   └── .env.example      # Environment template
 ├── images/               # Image assets
 ├── assets/              # Other assets
 └── README.md           # This file
@@ -130,100 +156,45 @@ Edit the CSS custom properties in `css/main.css`:
 }
 ```
 
-### Content
-- Update company information in HTML files
-- Modify team member data in `backend/server.js`
-- Add your software projects to the API endpoints
-- Replace placeholder images with actual assets
+### Content Updates
+- **Homepage content**: Edit `index.html`
+- **Software projects**: Edit the data array in `js/software.js`
+- **News/updates**: Edit the data array in `js/updates.js`
+- **Styling**: Edit CSS files in the `css/` directory
+- **Replace placeholder images** with actual assets
 
-### Email Templates
-Customize email templates in `backend/server.js`:
-- Contact form auto-reply
-- Newsletter welcome email
-- Admin notifications
-
-## 🔧 API Endpoints
-
-### Contact Form
-```
-POST /api/contact
-Content-Type: application/json
-
-{
-  "name": "John Doe",
-  "email": "john@example.com",
-  "organization": "Example Corp",
-  "subject": "partnership",
-  "message": "Hello..."
-}
-```
-
-### Newsletter Subscription
-```
-POST /api/newsletter
-Content-Type: application/json
-
-{
-  "email": "user@example.com"
-}
-```
-
-### Software Data
-```
-GET /api/software?category=education&status=active
-```
-
-### Updates/News
-```
-GET /api/updates?category=release&limit=10&featured=true
-```
+### Adding New Pages
+1. Create new HTML file in root directory
+2. Copy the header/footer structure from existing pages
+3. Include necessary CSS and JavaScript files
+4. Update navigation links in all pages
 
 ## 🚀 Deployment
 
-### Production Setup
+### GitHub Pages
+1. Push code to a GitHub repository
+2. Go to Settings → Pages
+3. Select source branch (usually `main` or `gh-pages`)
+4. Your site will be available at `https://username.github.io/repository-name`
 
-1. **Environment Configuration**:
-   ```env
-   NODE_ENV=production
-   PORT=80
-   FRONTEND_URL=https://yourdomain.com
-   ```
+### Netlify
+1. Connect your GitHub repository to Netlify
+2. Set build command to empty (it's a static site)
+3. Set publish directory to root (`.`)
+4. Deploy automatically on git push
+5. For form handling, add `netlify` attribute to HTML forms
 
-2. **Build and Start**:
-   ```bash
-   cd backend
-   npm install --production
-   npm start
-   ```
+### Vercel
+1. Import your GitHub repository to Vercel
+2. No build configuration needed
+3. Automatic deployments on git push
+4. Can add serverless functions for form handling
 
-### Docker Deployment
-```dockerfile
-FROM node:16-alpine
-WORKDIR /app
-COPY backend/package*.json ./
-RUN npm install --production
-COPY . .
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
-### Nginx Configuration
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com;
-    
-    location / {
-        proxy_pass http://localhost:3000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-    }
-    
-    location /api/ {
-        proxy_pass http://localhost:3000/api/;
-    }
-}
-```
+### Traditional Web Hosting
+Upload all files to your web hosting provider's public folder:
+- Usually `public_html`, `www`, or `htdocs`
+- Use FTP or hosting provider's file manager
+- No server configuration needed
 
 ## 🔒 Security Features
 

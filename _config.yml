@@ -1,0 +1,76 @@
+# GitHub Pages Configuration
+title: "Iron Code Studios"
+description: "Forging Code for Social Impact - Enterprise-grade software solutions for NGOs and social organizations"
+url: "https://dillmantis.github.io"
+baseurl: "/iron-code-studios"
+
+# Repository information
+repository: "dillmantis/iron-code-studios"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from Jekyll processing
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - .github
+  - CONTRIBUTING.md
+  - SETUP.md
+
+# Include hidden files that should be processed
+include:
+  - .well-known
+
+# Plugin settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# SEO and metadata
+logo: "/images/logo.svg"
+twitter:
+  username: ironcodestudios
+  card: summary_large_image
+
+facebook:
+  app_id: ""
+  publisher: ""
+
+social:
+  name: "Iron Code Studios"
+  links:
+    - https://github.com/dillmantis/iron-code-studios
+    - https://linkedin.com/company/iron-code-studios
+    - https://twitter.com/ironcodestudios
+
+# Author information
+author:
+  name: "Iron Code Studios Team"
+  email: "hello@ironcodestudios.org"
+  twitter: "ironcodestudios"
+
+# Google Analytics (add your tracking ID when available)
+google_analytics: ""
+
+# Search engine verification
+google_site_verification: ""
+bing_site_verification: ""
+
+# Security headers via Jekyll
+webrick:
+  headers:
+    X-Frame-Options: DENY
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: "1; mode=block"
+    Referrer-Policy: strict-origin-when-cross-origin

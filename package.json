@@ -1,0 +1,37 @@
+{
+  "name": "iron-code-studios-frontend",
+  "version": "1.0.0",
+  "description": "Iron Code Studios Website - Frontend",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "start": "node backend/server.js",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "serve": "python3 -m http.server 8000",
+    "build:prod": "echo 'Building for production...' && npm run format"
+  },
+  "keywords": [
+    "website",
+    "html",
+    "css",
+    "javascript",
+    "social-impact",
+    "ngo"
+  ],
+  "author": "Iron Code Studios",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^35.0.0"
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "htmlWhitespaceSensitivity": "css"
+  }
+}

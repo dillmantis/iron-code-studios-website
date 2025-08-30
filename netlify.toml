@@ -1,0 +1,11 @@
+[build]
+  # Static site - no build needed
+  command = ""
+  publish = "."
+
+# Form handling
+[[forms]]
+  name = "contact"
+
+[[forms]]
+  name = "newsletter"

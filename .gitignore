@@ -132,3 +132,6 @@ test-output/
 *.backup
 *.bak
 *.orig
+
+# Local Netlify folder
+.netlify

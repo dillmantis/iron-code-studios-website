@@ -232,34 +232,25 @@ function initContactForm() {
         
         try {
             const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData.entries());
             
-            // Create mailto link with form data
-            const subject = encodeURIComponent(data.subject || 'Contact Form Submission');
-            const body = encodeURIComponent(
-                `Name: ${data.name}\n` +
-                `Email: ${data.email}\n` +
-                (data.organization ? `Organization: ${data.organization}\n` : '') +
-                `\nMessage:\n${data.message}`
-            );
+            // Submit to Netlify
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
             
-            const mailtoLink = `mailto:hello@ironcodestudios.org?subject=${subject}&body=${body}`;
-            
-            // Simulate form submission delay
-            setTimeout(() => {
-                window.location.href = mailtoLink;
-                showFormMessage('success', 'Your email client should open. If not, please email us directly at hello@ironcodestudios.org');
+            if (response.ok) {
+                showFormMessage('success', 'Thank you! Your message has been sent successfully.');
                 contactForm.reset();
-                
-                // Hide loading state
-                submitBtn.classList.remove('btn-loading');
-                submitBtn.disabled = false;
-            }, 1000);
+            } else {
+                throw new Error('Form submission failed');
+            }
             
         } catch (error) {
             console.error('Error:', error);
-            showFormMessage('error', 'Please ensure you have an email client configured, or email us directly at hello@ironcodestudios.org');
-            
+            showFormMessage('error', 'Sorry, there was an error sending your message. Please try again.');
+        } finally {
             // Hide loading state
             submitBtn.classList.remove('btn-loading');
             submitBtn.disabled = false;
@@ -347,31 +338,26 @@ function initNewsletterForm() {
             button.disabled = true;
             
             try {
-                // Create mailto link for newsletter subscription
-                const subject = encodeURIComponent('Newsletter Subscription Request');
-                const body = encodeURIComponent(
-                    `Please subscribe the following email to your newsletter:\n\n` +
-                    `Email: ${email}\n\n` +
-                    `Thank you!`
-                );
+                const formData = new FormData(this);
                 
-                const mailtoLink = `mailto:hello@ironcodestudios.org?subject=${subject}&body=${body}`;
+                // Submit to Netlify
+                const response = await fetch('/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams(formData).toString()
+                });
                 
-                // Simulate subscription delay
-                setTimeout(() => {
-                    window.location.href = mailtoLink;
-                    showTooltip(button, 'Your email client should open to send subscription request');
+                if (response.ok) {
+                    showTooltip(button, 'Successfully subscribed!');
                     this.reset();
-                    
-                    // Reset button
-                    button.innerHTML = '<i class="fas fa-paper-plane"></i>';
-                    button.disabled = false;
-                }, 1000);
+                } else {
+                    throw new Error('Subscription failed');
+                }
                 
             } catch (error) {
                 console.error('Error:', error);
-                showTooltip(button, 'Please ensure you have an email client configured');
-                
+                showTooltip(button, 'Subscription failed. Please try again.');
+            } finally {
                 // Reset button
                 button.innerHTML = '<i class="fas fa-paper-plane"></i>';
                 button.disabled = false;
