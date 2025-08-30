@@ -1,5 +1,5 @@
 # Iron Code Studios - Enterprise Dockerfile
-FROM node:18-alpine AS base
+FROM node:24-alpine AS base
 
 # Security: Create non-root user
 RUN addgroup -g 1001 -S nodejs
