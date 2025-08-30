@@ -305,7 +305,7 @@ jobs:
         run: |
           mkdir -p dist
           cp -r *.html css js images assets dist/
-          echo "ironcodestudios.org" > dist/CNAME
+          echo "ironcodestudios.com" > dist/CNAME
           
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -319,7 +319,7 @@ jobs:
       - name: Health check
         run: |
           sleep 30
-          curl -f https://ironcodestudios.org || exit 1
+          curl -f https://ironcodestudios.com || exit 1
 
       - name: Create release
         if: github.event_name == 'push'
